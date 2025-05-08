@@ -1,8 +1,8 @@
-DAMSLNet:Dual-AttentionMulti-ScaleLightweightNetworkforPlantDiseaseClassification
+# DAMSLNet:Dual-AttentionMulti-ScaleLightweightNetworkforPlantDiseaseClassification
 
-Datasets:
+## Datasets:
 
-The xinong apple dataset at https://aistudio.baidu.com/aistudio/datasetdetail/11591.
+* The xinong apple dataset at https://aistudio.baidu.com/aistudio/datasetdetail/11591.
 It is created by Northwest University of Agriculture and Forestry Science and Technology. This dataset contains 8 types of apple leaf diseases. Most of the pictures in the dataset were taken by mobile phones at the Baishui, Luochuan and Qingcheng Apple Test Stations in China in 2021. In addition, a small amount of open-source disease data is also integrated. The dataset is mainly obtained under the condition of good light on sunny days, and some of it is collected on rainy days. Different collection conditions further enhance the diversity of the dataset. The background of the image includes the laboratory background and the complex agricultural environment.
 
 The FGVC8 dataset at https://pan.baidu.com/s/1W8aI1tObO8t02Z7zkKWvGA?pwd=2wxr.
