@@ -13,12 +13,3 @@ The dataset collected 54,303 health and disease images under controlled conditio
 
 The Rice dataset at https://pan.baidu.com/s/1IDGUFws2HDy72jxevUzLDg?pwd=mrq3
 This dataset contains 5,932 pictures, 4 types of rice leaf diseases, including Bacterialblight, blast, Brownspot and Tungro. Most of the dataset was taken by Nikon cameras in different rice fields in western Orissa, India, and a small number were taken from the agricultural disease and pest picture database. The samples in the data set are rich, covering single and complex background samples required for experiments.
-
-Introduction:
-If you want to use our code, you must have the following preparation under the PyTorch framework: see requirement.txt for details.
-
-Code Guidance: Download the dataset in the above link, put the training images and labels into your specify path, then run split_data.py to divide the dataset out of the training and validation of the document, then you can run the train.py file for training, training is complete run train.py.
-
-Running the plot_confuse.py will generate prediction results with pixel values of 0 and 1. Since these pixel values are relatively small, the prediction images appear with poor contrast when saved in PNG format (which is why they look almost entirely black). This is normal. To address this, you can run the adjust.py file to perform binarization processing on the prediction images.
-
-When training with datasets outside of the aforementioned ones, you will first need to convert the dataset into the format required by the network. Specifically, before training, you must use the bit.py file to transform the masks into the correct format.
