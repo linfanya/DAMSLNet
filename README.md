@@ -11,17 +11,18 @@ It's an Apple disease dataset built by Cornell Initiative for Digital Agricultur
 * The Plantvillage dataset at https://pan.baidu.com/s/1DinVIDPlr_WZ3GeK7B2a8g?pwd=9zn2.
 The dataset collected 54,303 health and disease images under controlled conditions, divided into 38 disease categories. These pictures cover 14 crops, including apple, blueberry, cherry, grape, orange, peach, pepper, potato, raspberry, soy, squash, strawberry and tomato. It contains images of 17 basic diseases, 4 bacterial diseases, 2 diseases caused by mold (oomycete), 2 viral diseases and 1 disease caused by mites. Images of 12 healthy crop leaves will not be significantly affected by the disease.
 
-* The Rice dataset at https://pan.baidu.com/s/1IDGUFws2HDy72jxevUzLDg?pwd=mrq3
+* The Rice dataset at https://pan.baidu.com/s/1IDGUFws2HDy72jxevUzLDg?pwd=mrq3.
 This dataset contains 5,932 pictures, 4 types of rice leaf diseases, including Bacterialblight, blast, Brownspot and Tungro. Most of the dataset was taken by Nikon cameras in different rice fields in western Orissa, India, and a small number were taken from the agricultural disease and pest picture database. The samples in the data set are rich, covering single and complex background samples required for experiments.
 
 ## Introduction
 
 * If you want to use our code, you must have the following preparation under the PyTorch framework: see requirement.txt for details.
 
-* Code Guidance: Download the dataset in the above link, put the training images and labels into "VOCdevkit/VOC2007/JPEGImages" and "VOCdevkit/VOC2007/SegmentationClass", then run Data_Split.py file to divide the data set can be seen in the “VOCdevkit/VOC2007/ImageSets/Segmentation out of the training and validation of the document, then you can run the train.py file for training, training is complete run get_miou.py After training, you can run get_miou.py to test the file.
-* Running the get_miou.py file will generate prediction results with pixel values of 0 and 1. Since these pixel values are relatively small, the prediction images appear with poor contrast when saved in PNG format (which is why they look almost entirely black). This is normal. To address this, you can run the adjust.py file to perform binarization processing on the prediction images.
-* When training with datasets outside of the aforementioned ones, you will first need to convert the dataset into the format required by the network. Specifically, before training, you must use the bit.py file to transform the masks into the correct format.
+## Code Guidance:
+* Download the dataset in the above link, put the training images and labels into your specify path, then run split_data.py file to divide the dataset into the training and testing set, then you can run the data_appand.py file to preprocess the datasets. Here are several methods for enhancing data for reference.
+* After that, you can run the train.py file for training and run test.py to test the network. The accuracy and loss value of training and testing set will be displayed on the terminal. 
+* Running the plot_confuse.py file will generate confusion matrix and ROC curve. By using the confusion matrix, accuracy, precision, recall, and F1-Score can be obtainedand be displayed on the terminal. Running the heatmap.py and featuremap.py will generate the corresponding heatmap and featuremaps.
 
 ## Reference
 
-* Li, H., Ren, Z., Zhu, G. et al. Enhancing medical image segmentation with MA-UNet: a multi-scale attention framework. The Visual Computer (2025).
+* Linfan Deng, Juan Qin, et al. DAMSLNet:Dual-AttentionMulti-ScaleLightweightNetworkforPlantDiseaseClassification (2025).
